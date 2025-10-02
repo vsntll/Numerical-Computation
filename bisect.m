@@ -1,4 +1,4 @@
-function [p,n] = bisect(func,a,b,fa,fb,atol)
+function [p,n] = bisection(func,a,b,fa,fb,atol)
 % function [p,n] = bisect(func,a,b,fa,fb,atol)
 %
 % Assuming fa = func(a), fb = func(b), and fa*fb < 0,
@@ -28,4 +28,25 @@ for k=1:n
 end
 p = (a+b)/2;
 end
+
+% Function definitionm
+func = @(x) sqrt(x) - 1.1;
+
+% Interval endpoints
+a = 0;
+b = 2;
+
+% Function values at interval endpoints;
+fa = func(a);
+fb = func(b);
+
+% Absolute tolerance
+atol = 1e-8;
+
+% Bisect call 
+[p,n] = bisection(func, a, b, fa, fb , atol);
+
+% Display results
+fprintf('Root approximation: %.12f\n', p)
+fprintf('Number of iterations: %d\n', n);
 
