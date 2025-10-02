@@ -46,7 +46,13 @@ atol = 1e-8;
 % Bisect call 
 [p,n] = bisection(func, a, b, fa, fb , atol);
 
-% Display results
-fprintf('Root approximation: %.12f\n', p)
-fprintf('Number of iterations: %d\n', n);
+troot = 1.21; 
+abs_error = abs(p-troot);
 
+% Display results
+fprintf('Root approximation: %.12f\n', p);
+fprintf('Number of iterations: %d\n', n);
+fprintf('Absolute error: %.2e\n', abs_error);
+
+abs_error_bound = (b - a)/2^n;
+fprintf('Error bound from bisection: %.2e\n', abs_error_bound)
