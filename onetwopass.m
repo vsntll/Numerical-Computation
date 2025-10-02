@@ -23,3 +23,14 @@ disp(['Two-pass: ', num2str(tp)]);   % Output: Two-pass: 2.1602
 disp(['One-pass: ', num2str(op)]);   % Output: One-pass: 2
 
 % The one-pass formula returns 2 and loses significant digits while the two-pass formula returns 2.1602 and remains accurate. This is due to numerical instability in the one-pass formula when dealing with large numbers.
+
+
+x = 0.05;
+n = [1 10 100 1000 1e4 1e5 1e6 1e7 1e8 1e9 1e10 1e11 1e12 1e13 1e14 1e15];
+for i = 1:length(n)
+   Inx(i) = (1 + x./n(i)).^n(i);
+end
+format long e
+table = [n.' Inx.'];
+disp(table)
+disp(['exp(0.05) = ', num2str(exp(0.05), 16)])
