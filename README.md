@@ -1,34 +1,39 @@
 # Numerical Computation Experiments in MATLAB
 
-This repository explores foundational and advanced topics in numerical computation using MATLAB. The focus is on understanding numerical precision, algorithm implementation, and the challenges involved in floating-point arithmetic and scientific computing.
+Explore the fundamentals and advanced concepts of numerical computation through hands-on MATLAB experiments designed for learners and practitioners in scientific computing.
 
-## About This Project
+## Overview
 
-The experiments and examples cover key areas of numerical methods, such as:
-- Numerical stability and precision
-- Comparing alternative algorithms for equivalent mathematical tasks
-- Demonstrating pitfalls like cancellation and round-off error
-- Applying computational methods to common scientific and engineering problems
+This repository provides a collection of scripts and experiments focused on key topics in numerical methods and computational mathematics. Its goal is to help deepen understanding of precision, algorithmic stability, and common numerical pitfalls encountered in engineering and science.
 
-## Features and Experiments
+## Key Topics Explored
 
-- Implementations of statistical measures (e.g., standard deviation) using multiple formulas
-- Experiments to reveal loss of significance and error propagation
-- Benchmarking results for test vectors and edge cases
-- Applications: compound interest, root finding, error analysis, and more
+- Numerical stability and floating-point precision  
+- Alternative algorithms for the same mathematical problems  
+- Effects of cancellation and round-off errors  
+- Computational experiments with statistical formulas (e.g., standard deviation)  
+- Practical applications including compound interest calculation, root finding, and error propagation analysis  
 
-## Extending the Repository
+## Features
 
-- Explore other numerical methods: integration, differentiation, solving equations, matrix operations
-- Analyze results using custom scripts for visualizing error and convergence
-- Experiment with different data types, input sizes, or numerical ranges
+- Clear and educational MATLAB implementations  
+- No dependencies on special toolboxes, ensuring broad accessibility  
+- Benchmarking with various test vectors and challenging edge cases  
+- Modular scripts designed for easy adaptation and extension  
 
 ## Getting Started
 
-Clone the repo and run the included MATLAB scripts to begin experimenting.
-- No special toolboxes required.
-- All code is written for clarity and educational value.
+1. Clone the repository:  
+`git clone https://github.com/vsntll/Numerical-Computation.git`
+2. Run the MATLAB scripts to observe and experiment with different numerical methods and behaviors.  
+3. Modify and extend scripts to explore additional numerical computation themes like integration, differentiation, and matrix operations.
 
----
+## Suggestions for Extension
 
-**Experiment, compare, and develop a deeper intuition for numerical computation in MATLAB.**
+- Implement other numerical techniques such as numerical integration and differential equation solvers  
+- Visualize convergence rates and error behavior to build intuition  
+- Experiment with different numeric data types and scaling scenarios  
+
+## Intended Users
+
+This project is ideal for students, educators, researchers, and developers looking to build a solid foundation in numerical analysis concepts and MATLAB programming without requiring extra toolboxes.
