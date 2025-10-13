@@ -6,7 +6,7 @@ fa = @(x) x.^3 - 2*x -6;    % original
 dfa = @(x) 3*x.^2 -2;       % derivative
 % 2. e ^-x  = x
 fb = @(x) exp(x) - x;   % original
-dfa= @(x) exp(x) - 1;   % derivative
+dfb= @(x) exp(x) - 1;   % derivative
 % 3. xsin(x) =1 
 fc = @(x) x * sin(x) - 1; 
 dfx= @(x) sin(x) + x*cos(x);
@@ -113,8 +113,8 @@ results.a_newton = newton(fa, dfa, 2.5);
 results.a_secant = secant(fa, 2, 3);
 
 % Eq 2: bisection should error out~
-results.b_bisection = bisection(fb, 0, 1);
-results.b_newton = newton(fb, dfb, 0.5)
+% results.b_bisection = bisection(fb, 0, 1); ---> This will error out because same sign endpoints in that function @ 0 and 1.
+results.b_newton = newton(fb, dfb, 0.5);
 results.b_secant = secant(fb, 0, 1);
 
 % Eq 3: root in [1,2]
@@ -129,6 +129,6 @@ results.d_secant = secant(fd, 0, 1);
 
 % Display
 disp('Roots found for each method & Equation')
-disp(results)
+disp(results);
 
 
