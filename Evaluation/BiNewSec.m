@@ -6,7 +6,7 @@
 
 % 1. x^3 - 2x - 5 = 0
 fa = @(x) x.^3 - 2*x -6;    % original
-dfa = @(x) 3*x.^2 -2;       % derivative
+dfa = @(x) 3*x.^2 -2;       % derivative  -> alternative is taking diff(fa, x)
 % 2. e ^-x  = x
 fb = @(x) exp(x) - x;   % original
 dfb= @(x) exp(x) - 1;   % derivative
@@ -60,19 +60,19 @@ function root = newton(f, df, x0)
     tol = 1e-8;             % Tolerance for convergence
     max_iter = 100;         % Maximum number of iterations allowed
     x = x0;                 % Current approximation
-for k = 1:max_iter
-        fx = f(x);
-        dfx = df(x);
-        if abs(dfx) < 1e-14 % Avoid division by very small derivative
-            root = x;
-            return
-        end
-        x_new = x - fx / dfx; % Newton update step
-        if abs(x_new - x) < tol || abs(fx) < tol % Check convergence
-            root = x_new;
-            return
-        end
-        x = x_new;           % Update current estimate
+    for k = 1:max_iter
+            fx = f(x);
+            dfx = df(x);
+            if abs(dfx) < 1e-14 % Avoid division by very small derivative
+                root = x;
+                return
+            end
+            x_new = x - fx / dfx; % Newton update step
+            if abs(x_new - x) < tol || abs(fx) < tol % Check convergence
+                root = x_new;
+                return
+            end
+            x = x_new;           % Update current estimate
     end
     root = x;               % Return last estimate if max iterations reached
 end
