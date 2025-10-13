@@ -1,6 +1,9 @@
 % Implement Bisection, Newton, and Secant methods in 1 dimension.
 % Test your implementations for each of the following equations and find at least 1 root.
 
+% Rough reason: Custom implementations and customizations
+
+
 % 1. x^3 - 2x - 5 = 0
 fa = @(x) x.^3 - 2*x -6;    % original
 dfa = @(x) 3*x.^2 -2;       % derivative
