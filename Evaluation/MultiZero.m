@@ -1,7 +1,7 @@
 % How many zeroes does the function
 % f(x) = sin(10x) - x have?
 
-% Function: Zero-finding routine
+% Function: Zero-finding routine -> Can  use fzero if it wants 1 root, but lets find multiple.
 
 
 f = @(x) sin(10*x) - x;
