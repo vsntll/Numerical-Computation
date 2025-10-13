@@ -12,4 +12,4 @@ x0 = initial guess / interval
 Systems of nonlinear equations
 x = fsolve(f, x0)
 f = function handle, vector if a system
-x0 = initial guess vectore
+x0 = initial guess vector
