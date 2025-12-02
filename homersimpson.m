@@ -1,6 +1,5 @@
 function [integral, n_evals] = simpson_composite(f, a, b, tol)
     % Composite Simpson's rule with adaptive refinement
-    n_evals = 0;
     
     % Start with n=2 intervals (3 points)
     n = 2;
